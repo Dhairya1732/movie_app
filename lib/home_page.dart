@@ -4,12 +4,14 @@ import 'dart:convert';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
   @override
   State<HomePage> createState() => HomePageState();
 }
 
 class HomePageState extends State<HomePage> {
   List<dynamic> movies = [];
+
   @override
   void initState() {
     super.initState();
@@ -33,34 +35,31 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Center(child: Text("Movie App")),
-        ),
-        backgroundColor: Colors.white,
-        body: Column(
-          children: [
-            const SizedBox(height: 20),
-            Expanded(
-              child: ListView.builder(
-                itemCount: movies.length,
-                itemBuilder: (BuildContext context, int index) {
-                  final movie = movies[index];
-                  return ListTile(
-                    title: Text(movie["title"]),
-                    subtitle: Text(movie["overview"]),
-                    leading: Image.network(
-                      "https://image.tmdb.org/t/p/w200${movie["poster_path"]}",
-                      width: 50,
-                    ),
-                  );
-                },
-              ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Movie App"),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          const SizedBox(height: 20),
+          Expanded(
+            child: ListView.builder(
+              itemCount: movies.length,
+              itemBuilder: (BuildContext context, int index) {
+                final movie = movies[index];
+                return ListTile(
+                  title: Text(movie["title"]),
+                  subtitle: Text(movie["overview"]),
+                  leading: Image.network(
+                    "https://image.tmdb.org/t/p/w200${movie["poster_path"]}",
+                    width: 50,
+                  ),
+                );
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
