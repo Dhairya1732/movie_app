@@ -1,6 +1,12 @@
 # movie_app
 
-A new Flutter project.
+A new Flutter project. It is a simple practice app to display the list of popular movies using the TMDB API.
+This is the Login Page.
+![login page](App Images\HomePage.jpeg)
+
+This is the Home Page.
+
+![home page](App Images\LoginPage.jpeg)
 
 ## Getting Started
 
