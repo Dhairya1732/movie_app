@@ -4,11 +4,11 @@ A new Flutter project. It is a simple practice app to display the list of popula
 
 This is the Login Page.
 
-<img src="App Images/LoginPage.jpeg" alt="login page" width="300" height="200">
+<img src="AppImages/LoginPage.jpeg" alt="login page" width="300" height="200">
 
 This is the Home Page.
 
-<img src="App Images/HomePage.jpeg" alt="home page" width="300" height="200">
+<img src="AppImages/HomePage.jpeg" alt="home page" width="300" height="200">
 
 ## Getting Started
 
